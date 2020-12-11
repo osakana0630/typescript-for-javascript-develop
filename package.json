@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/osakana0630/typescript-for-javascript-develop#readme",
   "devDependencies": {
+    "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
   }
 }

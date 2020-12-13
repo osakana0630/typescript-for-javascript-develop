@@ -1,19 +1,33 @@
 export {};
 
+class Mahotukai {}
+class Souryo {}
 
-type ObjectType = {
-    name: string,
-    age: number
-};
+//classを多重継承することはできない
 
-//オブジェクト型で定義する
-interface ObjectInterface {
-    name: string,
-    age: number
-};
+class Taro extends Mahotukai {
 
-let object: ObjectType = {
-    name: "naoya",
-    age: 23
-};
+}
 
+interface Kenja {
+    ionazun(): void;
+}
+
+interface Senshi {
+    kougeki(): void;
+}
+
+//interfaceを使用することで多重継承のようなことが実現できる
+class Jiro implements Kenja, Senshi {
+    ionazun(): void {
+        console.log("ionazun")
+    }
+
+    kougeki(): void {
+        console.log("kougeki")
+}
+}
+
+const jiro = new Jiro();
+jiro.ionazun();
+jiro.kougeki();
